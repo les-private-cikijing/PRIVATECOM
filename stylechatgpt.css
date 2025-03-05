@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Efek smooth scroll */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimal setinggi layar */
+    background-color: white;
+    color: #333;
+    padding-top: 80px;
+}
+
+/* NAVBAR START */
+header {
+    background: blue;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 15px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    margin-top: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.nav-links a.active {
+    color: #FFD700; /* Warna emas saat aktif */
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ====== HAMBURGER MENU (HP & TABLET) ====== */
+.hamburger {
+    display: none; /* Default: tidak tampil di laptop */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;  /* Sesuaikan ukuran logo */
+    height: 50px; /* Sesuaikan ukuran logo */
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.brand-text {
+    font-size: 1.5rem; /* Ukuran font lebih besar */
+    font-weight: bold; /* Membuat teks lebih tegas */
+    letter-spacing: 1px; /* Memberi sedikit spasi antar huruf */
+    text-transform: uppercase; /* Mengubah teks jadi huruf besar semua */
+    color: white; /* Sesuaikan dengan desain yang kamu mau */
+}
+
+.brand-text:hover {
+    color: #FFD700; /* Warna saat di-hover */
+}
+
+/* NAVBAR END */
+
+/* HERO START */
+#beranda {
+    scroll-margin-top: 100px; /* Atur sesuai tinggi navbar */
+}
+.hero {
+    text-align: center;
+    background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), 
+                url('fun-learning.jpg') center/cover no-repeat;
+    color: white;
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan agar teks lebih tegas */
+    margin-bottom: 10px; /* Menambah jarak dengan <p> */
+}
+
+.hero h1 span {
+    color:blue;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+.hero p span {
+    color: blue;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 26px;
+    font-family: 'poppins', system-ui; /* Menggunakan font Poppins */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Tambahkan bayangan agar lebih terbaca */
+    margin-bottom: 10px; /* Menambah jarak dengan tombol */
+    max-width: 700px; /* Atur lebar maksimal */
+    word-wrap: break-word; /* Pastikan teks tidak keluar dari area */
+    text-align: center; /* Opsional: buat teks tetap rapi */    
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: white;
+    color: #0a4c9e;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Gunakan font Montserrat */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan pada tombol */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+}
+
+/* Efek hover: Button naik */
+.hero .btn:hover {
+    transform: translateY(-5px); /* Button naik ke atas */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
+    background: #0056b3; /* Ubah warna latar belakang */
+    color: white; /* Ubah warna teks */
+}
+
+/* Mengatur gambar di bawah tombol */
+.hero-image {
+    margin-top: 20px; /* Jarak dari tombol */
+    margin-bottom: -60px;
+}
+
+.hero-image img {
+    width: 100%; /* Sesuaikan ukuran */
+    max-width: 400px; /* Agar tidak terlalu besar */
+    border-radius: 10px; /* Opsional: Membuat sudut lebih halus */
+}
+/* HERO END */
+
+/* ABOUT START */
+#AboutUs {
+    scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
+}
+
+.about-section {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start;
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(100, 149, 237, 0.7)),
+                url('about-background.jpg') center/cover no-repeat;
+    padding: 0px 20px;
+    text-align: center;
+    color: black; /* Warna teks agar kontras dengan background */
+    min-height: 60vh;
+    margin-bottom: 30px;
+}
+
+/* Mengatur container agar lebih responsif */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: justify;
+    padding: 20px; /* Reduce padding */
+    margin-left: 0px; /* Remove extra left margin */
+    margin-right: auto; /* Push text to the left */
+    margin-top: -10px;
+    line-height: 1,5;
+    letter-spacing: 0.5px;
+}
+
+/* Mengatur heading agar lebih menonjol dan lebih ke samping */
+.about-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    color:blue;
+    text-align: left; /* Agar tetap ke kiri */
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+    padding-left: 30px; /* Sesuaikan jarak ke samping */
+    line-height: 0,5; /* Agar tidak terlalu dekat */
+}
+
+/* Mengatur daftar keunggulan */
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Tambahkan ikon centang */
+.about-text ul li::before {
+    content: "✔";
+    color: blue; /* Warna emas untuk ikon */
+    position: absolute;
+    left: 0;
+}
+
+.about-keunggulan {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.about-text p span {
+    font-weight: bold;
+    color:white;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+    margin-top: -40px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* ABOUT END */
+
+/* IG LOGO START */
+.instagram-section {
+    background: linear-gradient(rgba(100, 149, 237, 0.7), rgba(0, 123, 255, 0.8));
+    text-align: center;
+    padding: 30px 20px;
+    margin-top:-30px;
+}
+
+.instagram-section h2 {
+    margin-top: -70px;
+    color: blue;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+}
+
+.ig-desc {
+    color: black;
+}
+
+/* Mengatur container agar logo dan teks ada di tengah */
+.ig-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Mengatur logo dan teks dalam satu kolom */
+.ig-link {
+    display: flex;
+    flex-direction: column; /* Menjadikan logo dan teks dalam satu kolom */
+    align-items: center; /* Agar logo dan teks sejajar tengah */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+}
+
+/* Mengatur ukuran logo */
+.iglogo {
+    width: 120px;
+    height: 120px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover untuk logo */
+.iglogo:hover {
+    transform: scale(1.2);
+}
+
+/* Mengatur teks di bawah logo */
+.ig-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+    margin-top: 20px; 
+}
+/* IG LOGO END */
+
+/* PROGRAM START */
+#program {
+scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
+}
+
+.program-section {
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(100, 149, 237, 0.7));
+    text-align: center;
+    margin-top: 0px; /* Menambah jarak antara program card dan navbar */
+}
+
+.program-section h2 {
+    font-size: 32px;
+    color: blue; /* Warna biru */
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+    margin-top: -20px;
+    margin-bottom: 5px;
+}
+
+.program-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    margin-top: 20px; /* Jarak tambahan agar lebih rapi */
+}
+
+.program-card {
+    background: white;
+    border: 2px solid #0056b3;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.program-card h3 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.program-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.program-card .btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.program-card .btn:hover {
+    background-color: #003f8a;
+}
+
+.program-card ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Align to the left */
+    text-align: left;
+}
+
+.program-card ul li {
+    position: relative;
+    padding-left: 25px; /* Space for checkmark */
+    text-align: left;
+}
+
+.program-card ul li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: #0056b3; /* Adjust color */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+/* PROGRAM END */
+
+/* CONTACT START */
+#Contact {
+    scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
+}
+
+.wa-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(100, 149, 237, 0.7), rgba(100, 149, 237, 0.7));
+}
+
+.wa-section h2 {
+    color: blue;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+}
+
+.wa-desc {
+    color: black;
+}
+
+.wa-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wa-link {
+    display: flex;
+    flex-direction: column; /* Menjadikan logo dan teks dalam satu kolom */
+    align-items: center; /* Agar logo dan teks sejajar tengah */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+}
+
+.walogo {
+    width: 130px;
+    height: 130px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.walogo:hover {
+    transform: scale(1.2);
+}
+
+.wa-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+    margin-top: 20px;
+}
+/* CONTACT END */
+
+/* KEUNGGULAN START */
+.keunggulan-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.keunggulan h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.keunggulan-item {
+    text-align: center;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+.keunggulan-item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Opsional: Membuat sudut sedikit membulat */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* KEUNGGULAN END */
+
+/* Content */
+.content {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Biarkan konten berkembang dan footer tetap di bawah */
+footer {
+    margin-top: auto;
+    background: blue;
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+/* HANDPHONE SECTION START */
+
+/* Responsiveness Fix for Mobile Devices */
+@media (max-width: 768px) {
+    /* NAV START */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px;
+        flex-wrap: nowrap; /* Pastikan navbar tidak turun */
+        width: 100%;
+    }
+
+    .logo img {
+        width: 50px !important; /* Perkecil ukuran logo */
+        height: auto !important; /* Jaga aspek rasio */
+        margin-left: 5px !important; /* Geser logo sedikit ke kiri */
+    }
+
+    .hamburger {
+        display: block; /* Tampilkan hamburger di layar kecil */
+    }
+
+    .nav-links {
+        display: none; /* Sembunyikan menu awalnya */
+        flex-direction: column;
+        position: absolute;
+        background: blue;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex !important; /* Tampilkan menu saat tombol hamburger diklik */
+        flex-direction: column !important;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .nav-links li:last-child {
+        margin-right: 0; /* Pastikan Contact Us tidak keluar layar */
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    /* NAV END */
+
+    /* HERO START */
+    .hero {
+        padding-top: 40px; /* Tambahkan ruang agar tidak tertutup navbar */
+        min-height: 70vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1, .hero p {
+        margin-top: 0; /* Pastikan tidak ada jarak ekstra di atas teks */
+    }    
+
+    .hero h1 {
+        font-size: 28px;
+        margin-top: 0;
+    }
+    .hero p {
+        font-size: 18px;
+        margin-top: 10px;
+        max-width: 90%;
+    }
+    .hero .btn {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+    .hero-image img {
+        max-width: 80%;
+        margin-top: 10px;
+        margin-bottom: 0px ;
+    }
+    /* HERO END */
+
+    /* ABOUT START */
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .about-text {
+    flex: 1;
+    max-width: 100%;
+    text-align: justify;
+    padding: 20px; /* Reduce padding */
+    margin-left: 0px; /* Remove extra left margin */
+    margin-right: auto; /* Push text to the left */
+    margin-top: -10px;
+    line-height: 1,5;
+    letter-spacing: 0.5px;
+    }
+
+    .about-text h2 {
+        padding-left: 0px;
+        margin-top: -40px;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .about-keunggulan {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .about-text ul li::before {
+        content: "✔";
+        color: blue; /* Warna emas untuk ikon */
+        position: absolute;
+        left: 0;
+    }
+    .about-image {
+        max-width: 90%;
+        text-align: center;
+    }
+    .about-section {
+        padding: 40px 20px;
+        margin-bottom: 10px;
+    }
+    /* ABOUT END */
+
+    /* IG START */
+    .instagram-section {
+        margin-top: -10px; /* Mengurangi jarak antara About Us dan Instagram */
+        padding: 20px 20px;
+    }
+
+    .ig-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instagram-section h2 {
+        margin-top: -10px;
+    }
+    /* IG END */
+
+    /* PROGRAM START */
+    .program-card {
+        max-width: 90%;
+    }
+
+    .program-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program-card ul {
+        list-style: none; /* Remove default bullets */
+        padding-left: 0; /* Align to the left */
+        text-align: left;
+    }
+    
+    .program-card ul li {
+        position: relative;
+        padding-left: 25px; /* Space for checkmark */
+        text-align: left;
+    }
+    
+    .program-card ul li::before {
+        content: "✔"; /* Checkmark symbol */
+        color: #0056b3; /* Adjust color */
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+    /* PROGRAM END */
+
+    /* WA START */
+    .wa-section {
+        margin-top: 0px;
+    }
+
+    .wa-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wa-section h2 {
+        margin-top: -30px;
+    }
+    /* WA END */
+}
+
+/* HANDPHONE SECTION END */
+
+/* FOOTER START */
+
+    .footer {
+        background-color: #343a40;
+        color: #f8f9fa;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .footer a {
+        color: #f8f9fa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+        color: #ffc107;
+        text-decoration: underline;
+    }
+
+    .footer .container {
+        max-width: 1400px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .social-icons a {
+        font-size: 1.75rem;
+        margin-right: 15px;
+    }
+
+    .social-icons a:hover {
+        color: #ffc107;
+    }
+
+    .footer img {
+        max-height: 100px;
+        margin: 10px;
+    }
+
+    .footer p {
+        margin-bottom: 0;
+    }
+
+    .footer h5 {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+/* FOOTER END */
