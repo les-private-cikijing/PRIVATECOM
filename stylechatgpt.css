@@ -208,15 +208,15 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    max-width: 1000px;
+    gap: 20px;
+    max-width: 1200px;
     margin: auto;
     flex-wrap: wrap;
 }
 
 .about-text {
     flex: 1;
-    max-width: 600px;
+    max-width: 700px;
     text-align: justify;
     padding: 20px; /* Reduce padding */
     margin-left: 0px; /* Remove extra left margin */
@@ -235,7 +235,7 @@ nav {
     color:blue;
     text-align: left; /* Agar tetap ke kiri */
     text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
-    padding-left: 30px; /* Sesuaikan jarak ke samping */
+    padding-left: -30px; /* Sesuaikan jarak ke samping */
     line-height: 0,5; /* Agar tidak terlalu dekat */
 }
 
@@ -300,6 +300,7 @@ nav {
 
 .ig-desc {
     color: black;
+    font-size: 18px;
 }
 
 /* Mengatur container agar logo dan teks ada di tengah */
@@ -346,7 +347,7 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
 
 .program-section {
     padding: 50px 20px;
-    background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(100, 149, 237, 0.7));
+    background: linear-gradient(to right, rgba(100, 149, 237, 0.7), rgba(0, 123, 255, 0.7));
     text-align: center;
     margin-top: 0px; /* Menambah jarak antara program card dan navbar */
 }
@@ -429,84 +430,29 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
 
 /* CONTACT START */
 #Contact {
-    scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
+    scroll-margin-top: 95px; /* Atur sesuai tinggi navbar */
 }
 
-.wa-section {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(rgba(100, 149, 237, 0.7), rgba(100, 149, 237, 0.7));
+.contact-section {
+    background-color: rgba(100, 149, 237, 0.7);
+    padding: 20px 0; /* Padding agar tidak terlalu mepet */
+    width: 100%;
 }
 
-.wa-section h2 {
-    color: blue;
-    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+.contact-section .container {
+    max-width: 80%;
+    margin: auto;
 }
 
-.wa-desc {
-    color: black;
+section.contact-section .contact-form h2 {
+    margin-top: -30px; /* Mengurangi jarak ke elemen bawah */
 }
 
-.wa-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+section.contact-section .contact-info h2 {
+    margin-top: -20px;
 }
 
-.wa-link {
-    display: flex;
-    flex-direction: column; /* Menjadikan logo dan teks dalam satu kolom */
-    align-items: center; /* Agar logo dan teks sejajar tengah */
-    text-decoration: none; /* Menghapus garis bawah pada tautan */
-}
-
-.walogo {
-    width: 130px;
-    height: 130px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.walogo:hover {
-    transform: scale(1.2);
-}
-
-.wa-text {
-    font-size: 18px;
-    font-weight: bold;
-    color: blue;
-    margin-top: 20px;
-}
 /* CONTACT END */
-
-/* KEUNGGULAN START */
-.keunggulan-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.keunggulan h2 {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.keunggulan-item {
-    text-align: center;
-    max-width: 250px;
-    margin-top: 20px;
-}
-
-.keunggulan-item img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
-    border-radius: 8px; /* Opsional: Membuat sudut sedikit membulat */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-/* KEUNGGULAN END */
 
 /* Content */
 .content {
@@ -573,7 +519,7 @@ footer {
     }
 
     .nav-links a {
-        font-size: 12px;
+        font-size: 18px;
         padding: 5px 8px;
     }
     /* NAV END */
@@ -708,20 +654,29 @@ footer {
     }
     /* PROGRAM END */
 
-    /* WA START */
-    .wa-section {
-        margin-top: 0px;
+    /* CONTACT START */
+    #Contact {
+        scroll-margin-top: 85px; /* Atur sesuai tinggi navbar */
     }
 
-    .wa-container {
-        flex-direction: column;
-        align-items: center;
+    .social-links a {
+        display: block; /* Supaya tombolnya berjejer ke bawah di HP */
+        width: 100%; /* Biar lebih rapi di layar kecil */
+        margin-bottom: 10px; /* Tambah jarak antar tombol */
+    }
+    
+    .contact-form button {
+        margin-bottom: 20px; /* Tambah jarak antara tombol dan elemen di bawahnya */
     }
 
-    .wa-section h2 {
-        margin-top: -30px;
+    section.contact-section .contact-form h2 {
+        margin-top: -20px; /* Mengurangi jarak ke elemen bawah */
     }
-    /* WA END */
+    
+    section.contact-section .contact-info h2 {
+        margin-top: 5px;
+    }
+    /* CONTACT END */
 }
 
 /* HANDPHONE SECTION END */
