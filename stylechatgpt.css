@@ -8,13 +8,13 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Efek smooth scroll */
+    scroll-behavior: smooth;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Minimal setinggi layar */
+    min-height: 100vh;
     background-color: white;
     color: #333;
     padding-top: 80px;
@@ -29,6 +29,16 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: #FFD700;
 }
 
 nav {
@@ -65,15 +75,15 @@ nav {
 }
 
 .nav-links a.active {
-    color: #FFD700; /* Warna emas saat aktif */
+    color: #FFD700;
     font-weight: bold;
     text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
     transition: all 0.3s ease-in-out;
 }
 
-/* ====== HAMBURGER MENU (HP & TABLET) ====== */
+/* ====== HAMBURGER MENU ====== */
 .hamburger {
-    display: none; /* Default: tidak tampil di laptop */
+    display: none;
     font-size: 30px;
     cursor: pointer;
     color: white;
@@ -85,29 +95,28 @@ nav {
 }
 
 .logo img {
-    width: 60px;  /* Sesuaikan ukuran logo */
-    height: 50px; /* Sesuaikan ukuran logo */
+    width: 60px;
+    height: 50px;
     margin-right: 10px;
     margin-top: -10px;
 }
 
 .brand-text {
-    font-size: 1.5rem; /* Ukuran font lebih besar */
-    font-weight: bold; /* Membuat teks lebih tegas */
-    letter-spacing: 1px; /* Memberi sedikit spasi antar huruf */
-    text-transform: uppercase; /* Mengubah teks jadi huruf besar semua */
-    color: white; /* Sesuaikan dengan desain yang kamu mau */
-}
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
 
 .brand-text:hover {
-    color: #FFD700; /* Warna saat di-hover */
+    color: #FFD700;
 }
 
 /* NAVBAR END */
 
 /* HERO START */
 #beranda {
-    scroll-margin-top: 100px; /* Atur sesuai tinggi navbar */
+    scroll-margin-top: 100px;
 }
 .hero {
     text-align: center;
@@ -124,8 +133,8 @@ nav {
 .hero h1 {
     font-size: 38px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan agar teks lebih tegas */
-    margin-bottom: 10px; /* Menambah jarak dengan <p> */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
 }
 
 .hero h1 span {
@@ -141,12 +150,12 @@ nav {
 
 .hero p {
     font-size: 26px;
-    font-family: 'poppins', system-ui; /* Menggunakan font Poppins */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Tambahkan bayangan agar lebih terbaca */
-    margin-bottom: 10px; /* Menambah jarak dengan tombol */
-    max-width: 700px; /* Atur lebar maksimal */
-    word-wrap: break-word; /* Pastikan teks tidak keluar dari area */
-    text-align: center; /* Opsional: buat teks tetap rapi */    
+    font-family: 'poppins', system-ui;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    max-width: 700px;
+    word-wrap: break-word;
+    text-align: center;    
 }
 
 .hero .btn {
@@ -159,51 +168,46 @@ nav {
     border-radius: 5px;
     font-size: 26px;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif; /* Gunakan font Montserrat */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan pada tombol */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efek hover: Button naik */
 .hero .btn:hover {
-    transform: translateY(-5px); /* Button naik ke atas */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
-    background: #0056b3; /* Ubah warna latar belakang */
-    color: white; /* Ubah warna teks */
-}
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    background: #0056b3;
+    color: white;
 
-/* Mengatur gambar di bawah tombol */
 .hero-image {
-    margin-top: 20px; /* Jarak dari tombol */
+    margin-top: 20px;
     margin-bottom: -60px;
 }
 
 .hero-image img {
-    width: 100%; /* Sesuaikan ukuran */
-    max-width: 400px; /* Agar tidak terlalu besar */
-    border-radius: 10px; /* Opsional: Membuat sudut lebih halus */
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
 }
 /* HERO END */
 
 /* ABOUT START */
 #AboutUs {
-    scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
+    scroll-margin-top: 80px;
 }
 
 .about-section {
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start;
     align-items: flex-start;
-    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(100, 149, 237, 0.7)),
-                url('about-background.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(100, 149, 237, 0.7));
     padding: 0px 20px;
     text-align: center;
-    color: black; /* Warna teks agar kontras dengan background */
+    color: black;
     min-height: 60vh;
     margin-bottom: 30px;
 }
 
-/* Mengatur container agar lebih responsif */
 .about-container {
     display: flex;
     justify-content: center;
@@ -218,28 +222,25 @@ nav {
     flex: 1;
     max-width: 700px;
     text-align: justify;
-    padding: 20px; /* Reduce padding */
-    margin-left: 0px; /* Remove extra left margin */
-    margin-right: auto; /* Push text to the left */
+    padding: 20px;
+    margin-left: 0px;
+    margin-right: auto;
     margin-top: -10px;
     line-height: 1,5;
     letter-spacing: 0.5px;
 }
 
-/* Mengatur heading agar lebih menonjol dan lebih ke samping */
 .about-text h2 {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
     margin-top: 0px;
     color:blue;
-    text-align: left; /* Agar tetap ke kiri */
+    text-align: left;
     text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
-    padding-left: -30px; /* Sesuaikan jarak ke samping */
-    line-height: 0,5; /* Agar tidak terlalu dekat */
-}
+    padding-left: -30px;
+    line-height: 0,5;
 
-/* Mengatur daftar keunggulan */
 .about-text ul {
     list-style: none;
     padding: 0;
@@ -252,10 +253,9 @@ nav {
     position: relative;
 }
 
-/* Tambahkan ikon centang */
 .about-text ul li::before {
     content: "✔";
-    color: blue; /* Warna emas untuk ikon */
+    color: blue;
     position: absolute;
     left: 0;
 }
@@ -303,7 +303,6 @@ nav {
     font-size: 18px;
 }
 
-/* Mengatur container agar logo dan teks ada di tengah */
 .ig-container {
     display: flex;
     justify-content: center;
@@ -311,27 +310,23 @@ nav {
     margin-bottom: 5px;
 }
 
-/* Mengatur logo dan teks dalam satu kolom */
 .ig-link {
     display: flex;
-    flex-direction: column; /* Menjadikan logo dan teks dalam satu kolom */
-    align-items: center; /* Agar logo dan teks sejajar tengah */
-    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
 }
 
-/* Mengatur ukuran logo */
 .iglogo {
     width: 120px;
     height: 120px;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efek hover untuk logo */
 .iglogo:hover {
     transform: scale(1.2);
 }
 
-/* Mengatur teks di bawah logo */
 .ig-text {
     font-size: 18px;
     font-weight: bold;
@@ -342,15 +337,14 @@ nav {
 
 /* PROGRAM START */
 #program {
-scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
+scroll-margin-top: 80px;
 }
 
 .program-section {
     padding: 50px 20px;
     background: linear-gradient(to right, rgba(100, 149, 237, 0.7), rgba(0, 123, 255, 0.7));
     text-align: center;
-    margin-top: 0px; /* Menambah jarak antara program card dan navbar */
-}
+    margin-top: 0px;
 
 .program-section h2 {
     font-size: 32px;
@@ -364,8 +358,8 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Agar responsif di layar kecil */
-    margin-top: 20px; /* Jarak tambahan agar lebih rapi */
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .program-card {
@@ -408,20 +402,20 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
 }
 
 .program-card ul {
-    list-style: none; /* Remove default bullets */
-    padding-left: 0; /* Align to the left */
+    list-style: none;
+    padding-left: 0;
     text-align: left;
 }
 
 .program-card ul li {
     position: relative;
-    padding-left: 25px; /* Space for checkmark */
+    padding-left: 25px;
     text-align: left;
 }
 
 .program-card ul li::before {
-    content: "✔"; /* Checkmark symbol */
-    color: #0056b3; /* Adjust color */
+    content: "✔";
+    color: #0056b3;
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -430,12 +424,12 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
 
 /* CONTACT START */
 #Contact {
-    scroll-margin-top: 95px; /* Atur sesuai tinggi navbar */
+    scroll-margin-top: 95px;
 }
 
 .contact-section {
     background-color: rgba(100, 149, 237, 0.7);
-    padding: 20px 0; /* Padding agar tidak terlalu mepet */
+    padding: 20px 0;
     width: 100%;
 }
 
@@ -445,8 +439,7 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
 }
 
 section.contact-section .contact-form h2 {
-    margin-top: -30px; /* Mengurangi jarak ke elemen bawah */
-}
+    margin-top: -30px;
 
 section.contact-section .contact-info h2 {
     margin-top: -20px;
@@ -454,13 +447,12 @@ section.contact-section .contact-info h2 {
 
 /* CONTACT END */
 
-/* Content */
+/* CONTENT */
 .content {
     text-align: center;
     padding: 50px;
 }
 
-/* Biarkan konten berkembang dan footer tetap di bawah */
 footer {
     margin-top: auto;
     background: blue;
@@ -469,9 +461,7 @@ footer {
     color: white;
 }
 
-/* HANDPHONE SECTION START */
-
-/* Responsiveness Fix for Mobile Devices */
+/* MOBILE DEVICES SECTION START */
 @media (max-width: 768px) {
     /* NAV START */
     nav {
@@ -479,22 +469,32 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 15px 15px;
-        flex-wrap: nowrap; /* Pastikan navbar tidak turun */
+        flex-wrap: nowrap;
         width: 100%;
     }
 
+    .logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    }
+    
+    .logo a:hover {
+        color: #FFD700;
+    }
+
     .logo img {
-        width: 50px !important; /* Perkecil ukuran logo */
-        height: auto !important; /* Jaga aspek rasio */
-        margin-left: 5px !important; /* Geser logo sedikit ke kiri */
+        width: 50px !important;
+        height: auto !important;
+        margin-left: 5px !important;
     }
 
     .hamburger {
-        display: block; /* Tampilkan hamburger di layar kecil */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Sembunyikan menu awalnya */
+        display: none;
         flex-direction: column;
         position: absolute;
         background: blue;
@@ -506,7 +506,7 @@ footer {
     }
 
     .nav-links.show {
-        display: flex !important; /* Tampilkan menu saat tombol hamburger diklik */
+        display: flex !important;
         flex-direction: column !important;
     }
 
@@ -515,7 +515,7 @@ footer {
     }
 
     .nav-links li:last-child {
-        margin-right: 0; /* Pastikan Contact Us tidak keluar layar */
+        margin-right: 0;
     }
 
     .nav-links a {
@@ -526,8 +526,8 @@ footer {
 
     /* HERO START */
     .hero {
-        padding-top: 40px; /* Tambahkan ruang agar tidak tertutup navbar */
-        min-height: 70vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
+        padding-top: 40px;
+        min-height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -536,7 +536,7 @@ footer {
     }
 
     .hero h1, .hero p {
-        margin-top: 0; /* Pastikan tidak ada jarak ekstra di atas teks */
+        margin-top: 0;
     }    
 
     .hero h1 {
@@ -571,9 +571,9 @@ footer {
     flex: 1;
     max-width: 100%;
     text-align: justify;
-    padding: 20px; /* Reduce padding */
-    margin-left: 0px; /* Remove extra left margin */
-    margin-right: auto; /* Push text to the left */
+    padding: 20px;
+    margin-left: 0px;
+    margin-right: auto;
     margin-top: -10px;
     line-height: 1,5;
     letter-spacing: 0.5px;
@@ -593,7 +593,7 @@ footer {
 
     .about-text ul li::before {
         content: "✔";
-        color: blue; /* Warna emas untuk ikon */
+        color: blue;
         position: absolute;
         left: 0;
     }
@@ -609,7 +609,7 @@ footer {
 
     /* IG START */
     .instagram-section {
-        margin-top: -10px; /* Mengurangi jarak antara About Us dan Instagram */
+        margin-top: -10px;
         padding: 20px 20px;
     }
 
@@ -634,20 +634,20 @@ footer {
     }
 
     .program-card ul {
-        list-style: none; /* Remove default bullets */
-        padding-left: 0; /* Align to the left */
+        list-style: none;
+        padding-left: 0;
         text-align: left;
     }
     
     .program-card ul li {
         position: relative;
-        padding-left: 25px; /* Space for checkmark */
+        padding-left: 25px;
         text-align: left;
     }
     
     .program-card ul li::before {
-        content: "✔"; /* Checkmark symbol */
-        color: #0056b3; /* Adjust color */
+        content: "✔";
+        color: #0056b3;
         position: absolute;
         left: 0;
         font-weight: bold;
@@ -656,21 +656,21 @@ footer {
 
     /* CONTACT START */
     #Contact {
-        scroll-margin-top: 85px; /* Atur sesuai tinggi navbar */
+        scroll-margin-top: 85px;
     }
 
     .social-links a {
-        display: block; /* Supaya tombolnya berjejer ke bawah di HP */
-        width: 100%; /* Biar lebih rapi di layar kecil */
-        margin-bottom: 10px; /* Tambah jarak antar tombol */
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
     }
     
     .contact-form button {
-        margin-bottom: 20px; /* Tambah jarak antara tombol dan elemen di bawahnya */
+        margin-bottom: 20px;
     }
 
     section.contact-section .contact-form h2 {
-        margin-top: -20px; /* Mengurangi jarak ke elemen bawah */
+        margin-top: -20px;
     }
     
     section.contact-section .contact-info h2 {
