@@ -469,6 +469,37 @@ section.contact-section .contact-info h2 {
     padding: 50px;
 }
 
+/* KEUNGGULAN (DAERAH) START */
+.keunggulan {
+    text-align: center;
+    padding: 20px;
+    background-color: #0056b3;
+    color: white;
+}
+.keunggulan ul {
+    list-style-type: none;
+    padding: 0;
+}
+.keunggulan li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.keunggulan ul li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: white; /* Adjust color */
+    left: 0;
+    font-weight: bold;
+}
+
+.keunggulan p {
+    font-size: 23px;
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: #f8f9fa;
+}
+/* KEUNGGULAN (DAERAH) END */
+
 /* Biarkan konten berkembang dan footer tetap di bawah */
 footer {
     margin-top: auto;
