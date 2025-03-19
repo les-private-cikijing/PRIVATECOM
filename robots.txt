@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Blokir halaman yang tidak perlu diindeks (jika ada halaman admin atau internal)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /testing/
+
+# Batasi akses ke folder tertentu (jika ada)
+Disallow: /assets/
+Disallow: /scripts/
+Disallow: /css/
+
+# Blokir halaman hasil pencarian internal (jika ada)
+Disallow: /search
+
+# Blokir file-file sensitif (jika ada)
+Disallow: /config/
+Disallow: /database/
+Disallow: /backup/
+
+# Tentukan lokasi sitemap
+Sitemap: https://les-private-cikijing.github.io/PRIVATECOM/sitemap.xml
